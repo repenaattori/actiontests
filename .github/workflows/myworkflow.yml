@@ -1,9 +1,17 @@
 name: My workflow test
-on: [workflow_dispatch, pull_request]
+on: 
+  issues:
+    types: opened
+  workflow_dispatch:
+
 jobs:
-  printti:
+  files:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "Reima"
-          pwd
+      - name: filecreation
+        run: |
+          touch info.txt
+          echo "Heipparalla" > info.txt
+          cat info.txt
+    
+
