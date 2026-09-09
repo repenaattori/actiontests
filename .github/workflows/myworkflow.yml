@@ -19,7 +19,7 @@ jobs:
       - name: contents
         run: |
           ls -al
-          la -al backup
+          ls -al backup
           cat info.txt
     
 
