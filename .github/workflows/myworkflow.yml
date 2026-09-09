@@ -12,6 +12,14 @@ jobs:
         run: |
           touch info.txt
           echo "Heipparalla" > info.txt
+      - name: backup
+        run: |
+          mkdir backup
+          cp info.txt backup/info.txt
+      - name: contents
+        run: |
+          ls -al
+          la -al backup
           cat info.txt
     
 
