@@ -10,4 +10,11 @@ jobs:
       - uses: actions/checkout@v7
       - name: Create new repo file
         run: |
-          git remote -v
+          touch info.txt
+          echo "Reima Riihimäki" > info.txt
+          git config --global user.name 'repenaattori'
+          git config --global user.email 'reimarii@oamk.fi'
+          git add .
+          git commit -m 'Created info file'
+          git push
+          
