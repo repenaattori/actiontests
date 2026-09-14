@@ -6,4 +6,4 @@ jobs:
   repo-test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Nimesi on $MY_NAME"
+      - run: echo "URL on ${{vars.MY_SERVER_URL}}"
