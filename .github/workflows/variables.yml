@@ -11,4 +11,4 @@ jobs:
           echo "URL on $URL"
           echo "Password on ${{secrets.MY_PW}}"
           echo "Trigger branch is ${{github.repository}}"
-      - run: echo "My info is ${{toJson(github.event.head_commit)}}"
+      - run: echo "My info is ${{github.event.head_commit.author.username}}"
