@@ -2,10 +2,11 @@ name: Variables
 on: workflow_dispatch
 env:
   MY_NAME: Reima Riihimäki
+  URL: ${{vars.MY_SERVER_URL}}
 jobs:
   repo-test:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "URL on ${{vars.MY_SERVER_URL}}"
+          echo "URL on $URL"
           echo "Password on ${{secrets.MY_PW}}"
