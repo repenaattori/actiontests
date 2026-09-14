@@ -10,11 +10,10 @@ jobs:
       - uses: actions/checkout@v7
       - name: Create new repo file
         run: |
-          touch info.txt
-          echo "Reima Riihimäki" > info.txt
+          echo "Uusi rivi" >> README.md
           git config --global user.name 'repenaattori'
           git config --global user.email 'reimarii@oamk.fi'
-          git add .
-          git commit -m 'Created info file'
+          git add README.md
+          git commit -m 'Add row into readme'
           git push
           
