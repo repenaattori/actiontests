@@ -1,0 +1,10 @@
+name: Variables
+on: workflow_dispatch
+env:
+  MY_NAME: Reima Riihimäki
+
+jobs:
+  repo-test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Nimesi on $MY_NAME"
