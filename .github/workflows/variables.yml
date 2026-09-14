@@ -6,4 +6,6 @@ jobs:
   repo-test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "URL on ${{vars.MY_SERVER_URL}}"
+      - run: |
+          echo "URL on ${{vars.MY_SERVER_URL}}"
+          echo "Password on ${{secrets.MY_PW}}
