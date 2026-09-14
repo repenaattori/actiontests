@@ -1,0 +1,13 @@
+name: Pushing to repo
+on: workflow_dispatch
+permissions: 
+  contents: write
+
+jobs:
+  repo-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Create new repo file
+        run: |
+          git remote -v
